@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
+    <title>Notifications</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        .img {
-            height: 300px;
-            width: 300px; 
-        }
         body {
             margin: 0;
             padding: 0;
@@ -19,13 +15,19 @@
             background-size: cover; 
             height: 100vh;
             display: flex;
-            flex-direction: column; /* Added to make the layout flexible */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
         }
         .header {
             background: rgba(0, 0, 0, 0.7);
             padding: 10px 0;
             text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
         }
         .nav-bar {
             display: flex;
@@ -38,8 +40,8 @@
             font-size: 24px;
         }
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             margin-right: 10px;
         }
@@ -52,22 +54,26 @@
             cursor: pointer;
             font-family: monospace;
         }
-        .profile-container {
+        .notifications-container {
             width: 400px;
             padding: 20px;
             background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             text-align: center;
-            margin: 20px auto; /* Added margin for centering */
+            margin: 100px auto; /* Adjust margin as needed */
         }
         h1 {
             font-family: 'Press Start 2P', sans-serif;
             margin-bottom: 20px;
         }
-        p {
+        .notification {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .notification-content {
             font-size: 18px;
-            margin-bottom: 20px;
-            font-family: monospace; 
         }
     </style>
 </head>
@@ -75,22 +81,26 @@
     <div class="header">
         <div class="nav-bar">
             <div class="logo">Dreamland</div>
-            <button class="btn" onclick="goToNotifications()">Notifications</button>
+            <button class="btn" onclick="goToProfile()">Profile</button>
         </div>
     </div>
 
-    <div class="profile-container">
-        <h1>User Profile</h1>
-        <img src="profile pic.jfif" alt="Profile Picture" class="profile-pic">
-        <p>⮜Effrelia Suryawijaya⮞</p>
-        <p>⮜Sienli⮞</p>
-        <p>⮜effrelias@gmail.com⮞</p>
-
+    <div class="notifications-container">
+        <h1>Notifications</h1>
+        <div class="notification">
+            <p class="notification-content">You have a new message from John Doe.</p>
+        </div>
+        <div class="notification">
+            <p class="notification-content">You have a new friend request from Jane Smith.</p>
+        </div>
+        <div class="notification">
+            <p class="notification-content">You have a new event invitation for tomorrow.</p>
+        </div>
     </div>
 
     <script>
-        function goToNotifications() {
-            window.location.href = "notification sienli.html";
+        function goToProfile() {
+            window.location.href = "profile.html"; // Replace "profile.html" with the actual URL of your profile page
         }
     </script>
 </body>
