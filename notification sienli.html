@@ -56,6 +56,8 @@
         }
         .notifications-container {
             width: 400px;
+            max-height: 400px; /* Set maximum height for scrollability */
+            overflow-y: auto; /* Enable vertical scrolling */
             padding: 20px;
             background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
@@ -74,6 +76,12 @@
         }
         .notification-content {
             font-size: 18px;
+        }
+
+        /* Hide scrollbar */
+        .notifications-container::-webkit-scrollbar {
+            width: 0;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
         }
     </style>
 </head>
@@ -96,11 +104,13 @@
         <div class="notification">
             <p class="notification-content">You have a new event invitation for tomorrow.</p>
         </div>
+        <div class="notification">
+            <p class="notification-content">You have a new event invitation for tomorrow.</p>
     </div>
 
     <script>
         function goToProfile() {
-            window.location.href = "profile.html"; // Replace "profile.html" with the actual URL of your profile page
+            window.location.href = "profile sienli.html"; 
         }
     </script>
 </body>
