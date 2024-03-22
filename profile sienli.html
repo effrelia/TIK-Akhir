@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('night_background.jfif');
+            background-position: center;
+            background-size: cover; 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .profile-container {
+            width: 400px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Press Start 2P', sans-serif;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: darkviolet;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>User Profile</h1>
+        <img src="profile_picture.jpg" alt="Profile Picture" class="profile-pic">
+        <p>Name: John Doe</p>
+        <p>Email: johndoe@example.com</p>
+        <p>Age: 30</p>
+        <p>Location: Dreamland</p>
+        <button class="btn" onclick="goToNotifications()">Go to Notifications</button>
+    </div>
+
+    <script>
+        function goToNotifications() {
+            window.location.href = "notifications.html"; // Replace "notifications.html" with the actual URL of your notifications page
+        }
+    </script>
+</body>
+</html>

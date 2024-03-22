@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+	font-family: Arial, sans-serif; 
+  }
+
+  body {
+    height: 100vh;
+    background-image: url("sky_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  div {
+    padding: 20px 25px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .60);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 3.);
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+	font-family: 'Press Start 2P', sans-serif;
+    font-size: 23px;
+  }
+
+  form {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; 
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; 
+  }
+
+  p {
+    margin-top: 15px;
+    color: white;
+    text-align: center; 
+  }
+
+  a {
+    color: violet;
+    text-decoration: none; /* Remove underline */
+  }
+</style>
+</head>
+<body>
+
+<div>
+    <h1>Register</h1>
+    <form method="post" action="action_page.php">
+        <label for="email">Email</label> 
+        <input type="text" placeholder="Email address" name="email" id="email" required>
+        
+        <label for="psw">Password</label> 
+        <input type="password" placeholder="Password" name="psw" id="psw" required>
+        
+        <label for="psw-repeat">Repeat Password</label> 
+        <input type="password" placeholder="Confirmed password" name="psw-repeat" id="psw-repeat" required>
+        
+        <a href="homepage sienli.html"><button type="button" class="registerbtn">Register</button></a>
+    </form>
+
+    <p>Already have an account? <a href="html login sienli.html">Log in</a></p> 
+</div>
+
+</body>
+</html>
