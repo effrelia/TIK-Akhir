@@ -6,6 +6,10 @@
     <title>User Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
+        .img {
+            height: 300px;
+            width: 300px; 
+        }
         body {
             margin: 0;
             padding: 0;
@@ -15,30 +19,29 @@
             background-size: cover; 
             height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; /* Added to make the layout flexible */
             color: white;
         }
-        .profile-container {
-            width: 400px;
-            padding: 20px;
+        .header {
             background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
+            padding: 10px 0;
             text-align: center;
         }
-        h1 {
-            font-family: 'Press Start 2P', sans-serif;
-            margin-bottom: 20px;
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
+        .logo {
+            font-family: 'Press Start 2P', sans-serif;
+            font-size: 24px;
         }
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            margin-bottom: 20px;
+            margin-right: 10px;
         }
         .btn {
             padding: 10px 20px;
@@ -49,18 +52,39 @@
             cursor: pointer;
             font-family: monospace;
         }
+        .profile-container {
+            width: 400px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px auto; /* Added margin for centering */
+        }
+        h1 {
+            font-family: 'Press Start 2P', sans-serif;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="nav-bar">
+            <div class="logo">Dreamland</div>
+            <button class="btn" onclick="goToNotifications()">Notifications</button>
+        </div>
+    </div>
+
     <div class="profile-container">
         <h1>User Profile</h1>
-        <img src="profile_picture.jpg" alt="Profile Picture" class="profile-pic">
-        <p>Name: John Doe</p>
-        <p>Email: johndoe@example.com</p>
-        <p>Age: 30</p>
-        <p>Location: Dreamland</p>
-        <button class="btn" onclick="goToNotifications()">Go to Notifications</button>
+        <img src="profile pic.jfif" alt="Profile Picture" class="profile-pic">
+        <p>Effrelia Suryawijaya</p>
+        <p>effrelias@gmail.com</p>
     </div>
+
     <script>
         function goToNotifications() {
             window.location.href = "notifications.html"; // Replace "notifications.html" with the actual URL of your notifications page
